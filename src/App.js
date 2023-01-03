@@ -1,5 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Test from './Test';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
@@ -17,6 +24,13 @@ function App() {
         >
           Learn React
         </a>
+     <Router>
+      <Link to="/test">Link</Link>
+      <Routes>
+        <Route path='/test' element={<Test/>}/>
+      </Routes>
+     </Router>
+         
       </header>
     </div>
   );
